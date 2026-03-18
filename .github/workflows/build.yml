@@ -18,7 +18,13 @@ jobs:
         with:
           flutter-version: '3.27.2'
           channel: 'stable'
-      
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          
       - name: Install dependencies
         run: flutter pub get
       
